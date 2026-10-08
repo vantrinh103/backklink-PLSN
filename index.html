@@ -1,4 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Sơ đồ backlink PLSB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -18,7 +23,7 @@
   --bg:#0f1522; --surface:#172034; --ink:#e3e9f4; --muted:#9aa6bd; --line:#33405a;
   --navy:#9fb8e6; --steel:#6fb0e0; --band:#1a2840; --orange:#f0954d; --google:#5cc58a; --grey:#97a2b6;
   --up:#5cc58a; --warn:#e3b04f; --danger:#f07a6d; --chip:#22304a; --green:#5cc58a; color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55}
 .wrap{max-width:1280px;margin:0 auto;padding-inline:16px;padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
 h1,h2{margin:0;color:var(--navy);text-wrap:balance}
@@ -62,6 +67,8 @@ svg text{font-family:var(--f-body)}
 .legend span{display:inline-flex;align-items:center;gap:8px}
 .legend i{display:inline-block;width:26px;height:0;border-top:2.4px solid}
 </style>
+</head>
+<body>
 
 <div class="wrap">
   <header>
@@ -73,9 +80,9 @@ svg text{font-family:var(--f-body)}
     <div class="card-head"><div class="eyebrow">Sơ đồ 1</div><h2>Building textlink tầng</h2></div>
     <div class="diagram" id="d-tas"></div>
     <div class="legend">
-      <span><i style="border-color:var(--navy)"></i>Tier 1 trỏ thẳng trang chủ</span>
+      <span><i style="border-color:var(--navy)"></i>Tier 1 trỏ trang chủ hoặc page con</span>
       <span><i style="border-color:var(--steel)"></i>Tier 2 nuôi Tier 1</span>
-      <span><i style="border-color:var(--grey);border-top-style:dashed"></i>Nguồn đẩy GSA / BPN</span>
+      <span><i style="border-color:var(--grey);border-top-style:dashed"></i>Nguồn đẩy GSA / PBN</span>
     </div>
   </section>
 
@@ -113,31 +120,41 @@ function drawEdges(svg,E){for(const [cls,k,d] of E)el("path",{d,class:cls,"marke
 
 /* ---------- Sơ đồ 1: TAS ---------- */
 function drawTAS(){
-  const svg=el("svg",{viewBox:"0 0 1460 780",role:"img","aria-label":"Sơ đồ Building textlink tầng trỏ về trang chủ phelieusonbau.vn"});defs(svg);
-  for(const [a,b,y] of [["TẦNG ĐÍCH","money site · 1",82],["TIER 1","trỏ thẳng · 4",272],["TIER 2","nuôi tier 1 · 4",490],["NGUỒN ĐẨY","ngoài hệ",712]]){txt(svg,24,y,"lane",a);txt(svg,24,y+20,"lane-sub",b)}
+  const svg=el("svg",{viewBox:"0 0 1460 780",role:"img","aria-label":"Sơ đồ Building textlink tầng: 5 tài sản Tier 1 trỏ về trang chủ và 3 trang con phelieusonbau.vn"});defs(svg);
+  for(const [a,b,y] of [["TẦNG ĐÍCH","4 trang đích",82],["TIER 1","5 tài sản",272],["TIER 2","nuôi tier 1 · 4",490],["NGUỒN ĐẨY","ngoài hệ",712]]){txt(svg,24,y,"lane",a);txt(svg,24,y+20,"lane-sub",b)}
   for(const y of [166,386,644])el("line",{x1:180,x2:1440,y1:y,y2:y,class:"sep"},svg);
   el("rect",{x:180,y:194,width:1260,height:166,rx:16,class:"band"},svg);
-  txt(svg,1424,352,"band-label","TRỎ THẲNG MONEY SITE · 4","end");
+  txt(svg,1424,352,"band-label","3 VỀ TRANG CHỦ · BÁO PR TRỎ CẢ 4 TRANG","end");
   drawEdges(svg,[
-    ["e-home","home","M557,212 C557,170 640,170 640,128"],["e-home","home","M801,212 C801,170 700,170 700,128"],["e-home","home","M1045,212 C1045,170 760,170 760,128"],["e-home","home","M1289,212 C1289,165 820,170 820,128"],
-    ["e-t2","t2","M557,432 V338"],
-    ["e-t2","t2","M380,432 C380,385 500,385 500,338"],["e-t2","t2","M410,432 C410,372 740,392 740,338"],
-    ["e-t2","t2","M800,432 C800,385 620,385 620,338"],["e-t2","t2","M870,432 C870,390 840,380 840,338"],["e-t2","t2","M950,432 C950,385 1000,385 1000,338"],
-    ["e-t2","t2","M1210,432 C1210,385 1090,385 1090,338"],["e-t2","t2","M1330,432 C1330,385 1300,385 1300,338"],
-    ["e-push","push","M592,682 V600"]
+    ["e-home","home","M309,212 V132"],["e-home","home","M557,212 V132"],
+    ["e-home","home","M805,212 V132"],
+    ["e-home","home","M1053,212 V132"],
+    ["e-home","home","M1301,212 V132"],
+    ["e-home","home","M990,212 C990,168 680,158 620,132"],
+    ["e-home","home","M1015,212 C1015,172 880,160 875,132"],
+    ["e-home","home","M1110,212 C1110,172 1230,160 1235,132"],
+    ["e-t2","t2","M309,432 V338"],
+    ["e-t2","t2","M770,432 C770,390 805,385 805,338"],["e-t2","t2","M880,432 C880,380 1240,392 1240,338"],
+    ["e-t2","t2","M1000,432 C1000,388 840,388 840,338"],["e-t2","t2","M1100,432 C1100,390 1080,388 1080,338"],
+    ["e-t2","t2","M1301,432 V338"],
+    ["e-push","push","M309,682 V542"]
   ]);
-  txt(svg,604,630,"e-label","vào 4 Support Post");
+  txt(svg,321,616,"e-label","vào 4 Support Post");
   drawNodes(svg,{
-    home:{x:560,y:36,w:340,h:92,cls:"home",center:true,title:"/ (trang chủ)",lines:[["n-url","phelieusonbau.vn"],["n-topic","Money site · 4 đường vào từ Tier 1"]]},
-    wf:{x:444,y:212,w:226,h:126,cls:"t1",dot:"steel",title:"Webflow",tag:"DR 92",lines:[["n-url","thu-mua-phe-lieu-gia-cao"],["n-url",".webflow.io"],["n-topic","thu mua phế liệu giá cao"],["n-trend tr-up","▲ traffic nền +39%"]]},
-    lv:{x:688,y:212,w:226,h:126,cls:"t1",dot:"orange",title:"Lovable",tag:"DR 91",lines:[["n-url","tinh-gia-phe-lieu"],["n-url",".lovable.app"],["n-topic","tool tính giá theo kg"],["n-trend tr-up","▲ 3,4 nghìn → 184 nghìn"]]},
-    gs:{x:932,y:212,w:226,h:126,cls:"t1",dot:"google",title:"Google Sites",tag:"DR 100",lines:[["n-url","sites.google.com/view/"],["n-url","phe-lieu-son-bau"],["n-topic","site thương hiệu + Maps"],["n-trend tr-warn","▲ +486%, có sóng spam"]]},
-    pr:{x:1176,y:212,w:226,h:126,cls:"t1",dot:"grey",title:"Báo PR",tag:"theo báo",lines:[["n-topic","Báo điện tử Việt Nam"],["n-topic","tin thương hiệu"],["n-topic","chờ chọn báo"],["n-trend tr-na","Không phải parasite"]]},
-    soc:{x:196,y:432,w:224,h:126,dot:"grey",title:"Social entity",tag:"DR 97+",lines:[["n-topic","Facebook · YouTube"],["n-topic","LinkedIn · X · Pinterest"],["n-topic","→ Webflow, Lovable"]]},
-    spr:{x:444,y:432,w:296,h:168,dot:"steel",title:"4 Support Post",tag:"Webflow",lines:[["n-url","/blog/bang-gia-phe-lieu-hom-nay"],["n-url","/blog/cach-ban-phe-lieu-duoc-gia-cao"],["n-url","/blog/quy-trinh-thu-mua-tan-noi"],["n-url","/blog/phe-lieu-nao-duoc-gia-nhat"],["n-topic","nối chuỗi 1 → 2 → 3 → 4"]]},
-    tl:{x:760,y:432,w:236,h:126,dot:"grey",title:"Textlink sidebar",tag:"500 link",lines:[["n-topic","Site cùng theme"],["n-topic","Anchor: thu mua phế liệu"],["n-topic","+ brand"],["n-topic","→ Webflow, Lovable, G.Sites"]]},
-    tlt:{x:1164,y:432,w:236,h:110,dot:"grey",title:"Textlink traffic",tag:"theme",lines:[["n-topic","trust lịch theme"],["n-topic","→ Google Sites, Báo PR"]]},
-    gsa:{x:442,y:682,w:300,h:62,cls:"soft",title:"GSA / BPN",lines:[["n-topic","nguồn đẩy ngoài hệ"]]}
+    home:{x:196,y:36,w:474,h:96,cls:"home",center:true,title:"/ (trang chủ)",lines:[["n-url","phelieusonbau.vn"],["n-topic","nhận từ Mystrikingly, Textlink sidebar, Báo PR"]]},
+    p_gia:{x:692,y:36,w:226,h:96,cls:"home",title:"Bảng giá thu mua",lines:[["n-url","/bang-gia-thu-mua/"],["n-topic","nhận từ Apps Script, Báo PR"]]},
+    p_bd:{x:940,y:36,w:226,h:96,cls:"home",title:"Thu mua Bình Dương",lines:[["n-url","/khu-vuc/tinh-binh-duong/"],["n-topic","nhận từ Báo PR"]]},
+    p_dong:{x:1188,y:36,w:226,h:96,cls:"home",title:"Thu mua phế liệu đồng",lines:[["n-url","/thu-mua/dong-phe-lieu/"],["n-topic","nhận từ Lovable, Báo PR"]]},
+    mys:{x:196,y:212,w:226,h:126,cls:"t1",dot:"steel",title:"Mystrikingly",tag:"DR 89",lines:[["n-url","thu-mua-phe-lieu-gia-cao"],["n-url",".mystrikingly.com"],["n-topic","hub method 08 → trang chủ"],["n-topic","chi tiết: xem Sơ đồ 2"]]},
+    tl:{x:444,y:212,w:236,h:126,cls:"t1",dot:"grey",title:"Textlink sidebar",tag:"500 link",lines:[["n-topic","Site cùng theme"],["n-topic","Anchor: thu mua phế liệu"],["n-topic","+ brand"],["n-topic","→ trang chủ"]]},
+    gas:{x:692,y:212,w:226,h:126,cls:"t1",dot:"google",title:"Google Apps Script",lines:[["n-url","script.google.com/macros/"],["n-url","s/<id>/exec"],["n-topic","web app bảng giá · DR 100"],["n-topic","→ bảng giá thu mua"]]},
+    pr:{x:940,y:212,w:226,h:126,cls:"t1",dot:"grey",title:"Báo PR",tag:"theo báo",lines:[["n-topic","Báo điện tử Việt Nam"],["n-topic","tin thương hiệu"],["n-topic","→ cả 4 trang đích"],["n-trend tr-na","Không phải parasite"]]},
+    lv:{x:1188,y:212,w:226,h:126,cls:"t1",dot:"orange",title:"Lovable",tag:"DR 91",lines:[["n-url","gia-dong-phe-lieu"],["n-url",".lovable.app"],["n-topic","tool tra giá đồng → đồng"],["n-trend tr-up","▲ 3,4 nghìn → 184 nghìn"]]},
+    spr:{x:196,y:432,w:226,h:110,dot:"steel",title:"4 Support Post",lines:[["n-topic","nối chuỗi 1 → 2 → 3 → 4"],["n-topic","→ Mystrikingly (hub)"]]},
+    soc:{x:692,y:432,w:236,h:110,dot:"grey",title:"Social entity",tag:"DR 97+",lines:[["n-topic","Facebook · YouTube · LinkedIn"],["n-topic","→ Apps Script, Lovable"]]},
+    tlt:{x:940,y:432,w:226,h:110,dot:"grey",title:"Textlink traffic",tag:"theme",lines:[["n-topic","trust lịch theme"],["n-topic","→ Apps Script, Báo PR"]]},
+    gsw:{x:1188,y:432,w:226,h:110,dot:"grey",title:"Web 2.0",lines:[["n-topic","site web 2.0 chất lượng"],["n-topic","→ Lovable"]]},
+    gsa:{x:196,y:682,w:226,h:62,cls:"soft",title:"GSA / PBN",lines:[["n-topic","nguồn đẩy ngoài hệ"]]}
   });
   document.getElementById("d-tas").appendChild(svg);
 }
@@ -178,5 +195,5 @@ function drawM08(){
 }
 drawTAS();drawM08();
 </script>
-
-</body></html>
+</body>
+</html>
