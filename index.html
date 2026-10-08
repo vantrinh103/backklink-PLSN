@@ -141,16 +141,16 @@ function drawTAS(){
   ]);
   txt(svg,321,616,"e-label","vào 4 Support Post");
   drawNodes(svg,{
-    home:{x:196,y:36,w:474,h:96,cls:"home",center:true,title:"/ (trang chủ)",lines:[["n-url","phelieusonbau.vn"],["n-topic","nhận từ Mystrikingly, Textlink sidebar, Báo PR"]]},
+    home:{x:196,y:36,w:474,h:96,cls:"home",center:true,title:"/ (trang chủ)",lines:[["n-url","phelieusonbau.vn"],["n-topic","nhận từ Webflow, Textlink sidebar, Báo PR"]]},
     p_gia:{x:692,y:36,w:226,h:96,cls:"home",title:"Bảng giá thu mua",lines:[["n-url","/bang-gia-thu-mua/"],["n-topic","nhận từ Apps Script, Báo PR"]]},
     p_bd:{x:940,y:36,w:226,h:96,cls:"home",title:"Thu mua Bình Dương",lines:[["n-url","/khu-vuc/tinh-binh-duong/"],["n-topic","nhận từ Báo PR"]]},
     p_dong:{x:1188,y:36,w:226,h:96,cls:"home",title:"Thu mua phế liệu đồng",lines:[["n-url","/thu-mua/dong-phe-lieu/"],["n-topic","nhận từ Lovable, Báo PR"]]},
-    mys:{x:196,y:212,w:226,h:126,cls:"t1",dot:"steel",title:"Mystrikingly",tag:"DR 89",lines:[["n-url","thu-mua-phe-lieu-gia-cao"],["n-url",".mystrikingly.com"],["n-topic","hub method 08 → trang chủ"],["n-topic","chi tiết: xem Sơ đồ 2"]]},
+    wf:{x:196,y:212,w:226,h:126,cls:"t1",dot:"steel",title:"Webflow",tag:"DR 92",lines:[["n-url","thu-mua-phe-lieu-gia-cao"],["n-url",".webflow.io"],["n-topic","hub method 08 → trang chủ"],["n-topic","chi tiết: xem Sơ đồ 2"]]},
     tl:{x:444,y:212,w:236,h:126,cls:"t1",dot:"grey",title:"Textlink sidebar",tag:"500 link",lines:[["n-topic","Site cùng theme"],["n-topic","Anchor: thu mua phế liệu"],["n-topic","+ brand"],["n-topic","→ trang chủ"]]},
     gas:{x:692,y:212,w:226,h:126,cls:"t1",dot:"google",title:"Google Apps Script",lines:[["n-url","script.google.com/macros/"],["n-url","s/<id>/exec"],["n-topic","web app bảng giá · DR 100"],["n-topic","→ bảng giá thu mua"]]},
     pr:{x:940,y:212,w:226,h:126,cls:"t1",dot:"grey",title:"Báo PR",tag:"theo báo",lines:[["n-topic","Báo điện tử Việt Nam"],["n-topic","tin thương hiệu"],["n-topic","→ cả 4 trang đích"],["n-trend tr-na","Không phải parasite"]]},
     lv:{x:1188,y:212,w:226,h:126,cls:"t1",dot:"orange",title:"Lovable",tag:"DR 91",lines:[["n-url","gia-dong-phe-lieu"],["n-url",".lovable.app"],["n-topic","tool tra giá đồng → đồng"],["n-trend tr-up","▲ 3,4 nghìn → 184 nghìn"]]},
-    spr:{x:196,y:432,w:226,h:110,dot:"steel",title:"4 Support Post",lines:[["n-topic","nối chuỗi 1 → 2 → 3 → 4"],["n-topic","→ Mystrikingly (hub)"]]},
+    spr:{x:196,y:432,w:226,h:110,dot:"steel",title:"4 Support Post",lines:[["n-topic","nối chuỗi 1 → 2 → 3 → 4"],["n-topic","→ Webflow (hub)"]]},
     soc:{x:692,y:432,w:236,h:110,dot:"grey",title:"Social entity",tag:"DR 97+",lines:[["n-topic","Facebook · YouTube · LinkedIn"],["n-topic","→ Apps Script, Lovable"]]},
     tlt:{x:940,y:432,w:226,h:110,dot:"grey",title:"Textlink traffic",tag:"theme",lines:[["n-topic","trust lịch theme"],["n-topic","→ Apps Script, Báo PR"]]},
     gsw:{x:1188,y:432,w:226,h:110,dot:"grey",title:"Web 2.0",lines:[["n-topic","site web 2.0 chất lượng"],["n-topic","→ Lovable"]]},
@@ -165,7 +165,7 @@ function drawM08(){
   for(const [a,b,y] of [["TẦNG ĐÍCH","money site",82],["CỤM METHOD 08","cùng 1 domain",300],["","internal link",340],["BỔ TRỢ","tầng 2 · tầng 3",722]]){if(a)txt(svg,24,y,"lane",a);txt(svg,24,y+20,"lane-sub",b)}
   for(const y of [166,656])el("line",{x1:180,x2:1620,y1:y,y2:y,class:"sep"},svg);
   el("rect",{x:400,y:196,width:940,height:428,rx:18,class:"domain-frame"},svg);
-  txt(svg,420,218,"domain-label","CÙNG 1 DOMAIN · *.MYSTRIKINGLY.COM · DR 89 · TRAFFIC NỀN +64%");
+  txt(svg,420,218,"domain-label","CÙNG 1 DOMAIN · *.WEBFLOW.IO · DR 92 · TRAFFIC NỀN +39%");
   drawEdges(svg,[
     ["e-money","money","M870,360 V128"],
     ["e-ring","ring","M720,262 H1020"],["e-ring","ring","M1160,338 V490"],["e-ring","ring","M1020,568 H720"],["e-ring","ring","M580,490 V338"],
@@ -181,11 +181,11 @@ function drawM08(){
   txt(svg,1505,560,"e-label","vào 4 Support Post");
   drawNodes(svg,{
     home:{x:700,y:36,w:340,h:92,cls:"home",center:true,title:"/ (trang chủ)",lines:[["n-url","phelieusonbau.vn"],["n-topic","Money site · nhận link từ hub"]]},
-    hub:{x:730,y:360,w:280,h:108,cls:"t1",dot:"steel",title:"Giá cao · hub",tag:"TIER 1",tagCls:"hub",lines:[["n-url","thu-mua-phe-lieu-gia-cao"],["n-url",".mystrikingly.com"],["n-topic","thu mua phế liệu giá cao"]]},
-    bd:{x:440,y:230,w:280,h:108,dot:"steel",title:"Bình Dương",tag:"→ hub",lines:[["n-url","thu-mua-phe-lieu-binh-duong"],["n-url",".mystrikingly.com"],["n-topic","thu mua phế liệu Bình Dương"]]},
-    cm:{x:1020,y:230,w:280,h:108,dot:"steel",title:"Cà Mau",tag:"→ hub",lines:[["n-url","thu-mua-phe-lieu-ca-mau"],["n-url",".mystrikingly.com"],["n-topic","thu mua phế liệu Cà Mau"]]},
-    th:{x:440,y:490,w:280,h:108,dot:"steel",title:"Giá thép",tag:"→ hub",lines:[["n-url","gia-thep-phe-lieu"],["n-url",".mystrikingly.com"],["n-topic","bảng giá thép phế liệu"]]},
-    in:{x:1020,y:490,w:280,h:108,dot:"steel",title:"Giá inox",tag:"→ hub",lines:[["n-url","gia-inox-phe-lieu"],["n-url",".mystrikingly.com"],["n-topic","bảng giá inox phế liệu"]]},
+    hub:{x:730,y:360,w:280,h:108,cls:"t1",dot:"steel",title:"Giá cao · hub",tag:"TIER 1",tagCls:"hub",lines:[["n-url","thu-mua-phe-lieu-gia-cao"],["n-url",".webflow.io"],["n-topic","thu mua phế liệu giá cao"]]},
+    bd:{x:440,y:230,w:280,h:108,dot:"steel",title:"Bình Dương",tag:"→ hub",lines:[["n-url","thu-mua-phe-lieu-binh-duong"],["n-url",".webflow.io"],["n-topic","thu mua phế liệu Bình Dương"]]},
+    cm:{x:1020,y:230,w:280,h:108,dot:"steel",title:"Cà Mau",tag:"→ hub",lines:[["n-url","thu-mua-phe-lieu-ca-mau"],["n-url",".webflow.io"],["n-topic","thu mua phế liệu Cà Mau"]]},
+    th:{x:440,y:490,w:280,h:108,dot:"steel",title:"Giá thép",tag:"→ hub",lines:[["n-url","gia-thep-phe-lieu"],["n-url",".webflow.io"],["n-topic","bảng giá thép phế liệu"]]},
+    in:{x:1020,y:490,w:280,h:108,dot:"steel",title:"Giá inox",tag:"→ hub",lines:[["n-url","gia-inox-phe-lieu"],["n-url",".webflow.io"],["n-topic","bảng giá inox phế liệu"]]},
     spr:{x:1370,y:240,w:250,h:200,cls:"entity",dot:"green",title:"4 Support Post",tag:"→ hub",lines:[["n-url","/blog/bang-gia-phe-lieu-hom-nay"],["n-url","/blog/ban-phe-lieu-gia-cao"],["n-url","/blog/thu-mua-tan-noi"],["n-url","/blog/phe-lieu-gia-nhat"],["n-topic","nối chuỗi 1 → 2 → 3 → 4"],["n-topic","trên site giá cao"]]},
     spl:{x:190,y:470,w:200,h:180,cls:"entity",dot:"green",title:"4 Support Post",lines:[["n-url","/blog/thep-hop"],["n-url","/blog/thep-tam"],["n-url","/blog/sat-thep-cong-trinh"],["n-url","/blog/khoi-luong-thep"],["n-topic","nối chuỗi 1 → 2 → 3 → 4"],["n-topic","trên site giá thép"]]},
     soc:{x:440,y:680,w:320,h:96,cls:"entity",dot:"green",title:"Tầng 2 · social, web 2.0",lines:[["n-topic","Facebook · YouTube · LinkedIn · X · Pinterest"],["n-topic","xác thực entity"]]},
